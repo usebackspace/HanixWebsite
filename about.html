@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Hanix | Premium B2B Bag Manufacturing</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header / Navigation (Hanix Consistent, Responsive) -->
+    <header id="site-header" class="sticky top-0 z-50 bg-white/90 shadow transition-all">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 py-2" aria-label="Main Navigation">
+            <div class="flex items-center gap-3">
+                <span class="font-mont text-2xl font-extrabold gradient-text">Hanix</span>
+            </div>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="index.html" class="nav-underline font-semibold">Home</a>
+                <a href="about.html" class="nav-underline font-semibold active" aria-current="page">About</a>
+                <a href="products.html" class="nav-underline font-semibold">Products</a>
+                <a href="categories.html" class="nav-underline font-semibold">Categories</a>
+                <a href="services.html" class="nav-underline font-semibold">Services</a>
+                <a href="clients.html" class="nav-underline font-semibold">Clients</a>
+                <a href="contact.html" class="nav-underline font-semibold">Contact</a>
+                <a href="contact.html" class="cta-btn px-5 py-2 rounded-lg font-bold ml-2 shadow-lg">Get Wholesale Quote</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg border border-hanix/30" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                <svg width="28" height="28" fill="none" stroke="#d8092c" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu (Responsive) -->
+        <div id="mobile-menu" class="mobile-menu closed fixed top-0 right-0 w-80 max-w-full h-full bg-white shadow-lg z-50 flex flex-col p-8 gap-6 md:hidden" aria-label="Mobile Navigation" aria-hidden="true">
+            <button id="mobile-menu-close" class="self-end mb-4" aria-label="Close menu">
+                <svg width="32" height="32" fill="none" stroke="#d8092c" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M6 18L18 6"/></svg>
+            </button>
+            <a href="index.html" class="nav-underline font-semibold text-lg">Home</a>
+            <a href="about.html" class="nav-underline font-semibold text-lg active" aria-current="page">About</a>
+            <a href="products.html" class="nav-underline font-semibold text-lg">Products</a>
+            <a href="categories.html" class="nav-underline font-semibold text-lg">Categories</a>
+            <a href="services.html" class="nav-underline font-semibold text-lg">Services</a>
+            <a href="clients.html" class="nav-underline font-semibold text-lg">Clients</a>
+            <a href="contact.html" class="nav-underline font-semibold text-lg">Contact</a>
+            <a href="contact.html" class="cta-btn px-5 py-2 rounded-lg font-bold mt-4">Get Wholesale Quote</a>
+        </div>
+    </header>
+
+    <!-- About Us Hero Section -->
+    <section class="hero-section about-hero" id="about-hero">
+        <div class="hero-gradient"></div>
+        <div class="container-xxl h-100 d-flex align-items-center">
+            <div class="row w-100 flex-column-reverse flex-lg-row align-items-center">
+                <div class="col-lg-6 d-flex flex-column justify-content-center hero-content">
+                    <h1 class="hero-title">About Hanix<br><span class="accent-text">Our Story, Mission & Vision</span></h1>
+                    <p class="hero-subtitle">Empowering global brands with innovative, high-quality bags and exceptional B2B service for over a decade.</p>
+                </div>
+                <div class="col-lg-6 hero-images">
+                    <div class="hero-mockup-container">
+                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" alt="About Hanix" style="width:100%;height:100%;object-fit:cover;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.15);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Story Section -->
+    <section class="about-section" id="company-story">
+        <div class="container-xxl py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="about-image-container">
+                        <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80" alt="Hanix Factory" class="w-100 h-100" style="border-radius:12px;object-fit:cover;box-shadow:0 10px 40px rgba(0,0,0,0.12);">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4">Our Journey</h2>
+                    <p class="section-subtitle mb-4">From humble beginnings to a global B2B leader</p>
+                    <p>Founded in 2012, Hanix began as a small workshop with a vision to redefine bag manufacturing for businesses worldwide. Over the years, our relentless commitment to quality, innovation, and customer satisfaction has transformed us into a trusted partner for global brands, corporations, and distributors. Today, Hanix stands at the forefront of the industry, delivering custom solutions and large-scale production with a personal touch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission, Vision, Values Section -->
+    <section class="about-section bg-light" id="mission-vision-values">
+        <div class="container-xxl py-5">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="section-title">Mission, Vision & Values</h2>
+                    <p class="section-subtitle">What drives Hanix every day</p>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="feature-item flex-column align-items-center text-center">
+                        <div class="feature-icon mb-3"><i class="fas fa-bullseye"></i></div>
+                        <h4>Our Mission</h4>
+                        <p>To empower businesses worldwide with innovative, reliable, and sustainable bag solutions tailored to their unique needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item flex-column align-items-center text-center">
+                        <div class="feature-icon mb-3"><i class="fas fa-eye"></i></div>
+                        <h4>Our Vision</h4>
+                        <p>To be the most trusted and admired B2B bag manufacturer, setting new standards in quality, service, and sustainability.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item flex-column align-items-center text-center">
+                        <div class="feature-icon mb-3"><i class="fas fa-hand-holding-heart"></i></div>
+                        <h4>Our Values</h4>
+                        <p>Integrity, innovation, customer focus, and a passion for excellence guide every decision and every product we deliver.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manufacturing Capability Section -->
+    <section class="about-section" id="manufacturing">
+        <div class="container-xxl py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="about-image-container">
+                        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Manufacturing" class="w-100 h-100" style="border-radius:12px;object-fit:cover;box-shadow:0 10px 40px rgba(0,0,0,0.12);">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <h2 class="section-title mb-4">Manufacturing Excellence</h2>
+                    <p class="section-subtitle mb-4">Advanced facilities & skilled craftsmanship</p>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3"><i class="fas fa-industry me-2 text-primary"></i> 50,000+ sq. ft. state-of-the-art factory</li>
+                        <li class="mb-3"><i class="fas fa-users-cog me-2 text-primary"></i> 200+ skilled professionals</li>
+                        <li class="mb-3"><i class="fas fa-cogs me-2 text-primary"></i> Automated production lines for efficiency</li>
+                        <li class="mb-3"><i class="fas fa-check-double me-2 text-primary"></i> Rigorous quality control at every stage</li>
+                        <li class="mb-3"><i class="fas fa-globe me-2 text-primary"></i> Global shipping & logistics expertise</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team / Leadership Section (Optional) -->
+    <section class="about-section bg-light" id="leadership">
+        <div class="container-xxl py-5">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="section-title">Meet Our Leadership</h2>
+                    <p class="section-subtitle">Experienced, passionate, and dedicated to your success</p>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="team-card p-4 bg-white rounded shadow text-center h-100">
+                        <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=200&q=80" alt="CEO" class="rounded-circle mb-3" style="width:100px;height:100px;object-fit:cover;">
+                        <h5 class="mb-1">Priya Sharma</h5>
+                        <p class="text-primary mb-2">Chief Executive Officer</p>
+                        <p class="mb-0">Visionary leader with 15+ years in global manufacturing and supply chain management.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-card p-4 bg-white rounded shadow text-center h-100">
+                        <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=200&q=80" alt="COO" class="rounded-circle mb-3" style="width:100px;height:100px;object-fit:cover;">
+                        <h5 class="mb-1">Rahul Mehta</h5>
+                        <p class="text-primary mb-2">Chief Operations Officer</p>
+                        <p class="mb-0">Expert in process optimization and large-scale production for international clients.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-card p-4 bg-white rounded shadow text-center h-100">
+                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=200&q=80" alt="Head of Design" class="rounded-circle mb-3" style="width:100px;height:100px;object-fit:cover;">
+                        <h5 class="mb-1">Ayesha Khan</h5>
+                        <p class="text-primary mb-2">Head of Design</p>
+                        <p class="mb-0">Creative force behind Hanix’s innovative and stylish bag collections.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="about-section cta-section" id="about-cta">
+        <div class="container-xxl py-5 text-center">
+            <h2 class="section-title mb-3">Ready to Partner with Hanix?</h2>
+            <p class="section-subtitle mb-4">Contact our B2B team for custom solutions, bulk orders, and global distribution.</p>
+            <a href="contact.html" class="btn btn-primary btn-lg px-5 py-3 shadow-lg"><i class="fas fa-paper-plane me-2"></i>Contact Us for Wholesale</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container-xxl py-5">
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Hanix</h5>
+                    <p>Hanix is a leading B2B bag manufacturer for global wholesale distribution and custom solutions.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Products</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Backpacks</a></li>
+                        <li><a href="#">Laptop Bags</a></li>
+                        <li><a href="#">Travel Bags</a></li>
+                        <li><a href="#">Corporate Bags</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row text-center">
+                <div class="col-12">
+                    <p class="mb-0">&copy; 2024 Hanix Manufacturing. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
