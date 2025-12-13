@@ -601,3 +601,46 @@ window.addEventListener('resize', () => {
 window.addEventListener('load', () => {
     console.log('Page fully loaded and ready!');
 });
+
+
+// SCROLL-BASED NAVBAR: hide on scroll DOWN, show on scroll UP
+(function () {
+  const header = document.getElementById('site-header');
+  if (!header) return;
+
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+
+  function updateHeader() {
+    const currentY = window.scrollY;
+
+    // Always visible at the top
+    if (currentY <= 10) {
+      header.classList.remove('nav-hidden');
+    } 
+    // Scrolling DOWN -> HIDE menu
+    else if (currentY > lastScrollY) {
+      header.classList.add('nav-hidden');
+    } 
+    // Scrolling UP -> SHOW menu
+    else if (currentY < lastScrollY) {
+      header.classList.remove('nav-hidden');
+    }
+
+    lastScrollY = currentY;
+    ticking = false;
+  }
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (!ticking) {
+        requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
+})();
+
+

@@ -1,65 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium B2B Bag Manufacturing - Global Wholesale Solutions</title>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-        <!-- Header / Navigation (Hanix Consistent, Responsive) -->
-        <header id="site-header" class="sticky top-0 z-50 bg-white/90 shadow transition-all">
-            <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 py-2" aria-label="Main Navigation">
-                <div class="flex items-center gap-3">
-                    <span class="font-mont text-2xl font-extrabold gradient-text">Hanix</span>
-                </div>
-                <div class="hidden md:flex items-center gap-6">
-                    <a href="index.html" class="nav-underline font-semibold active" aria-current="page">Home</a>
-                    <a href="about.html" class="nav-underline font-semibold">About</a>
-                    <a href="products.html" class="nav-underline font-semibold">Products</a>
-                    <a href="categories.html" class="nav-underline font-semibold">Categories</a>
-                    <a href="services.html" class="nav-underline font-semibold">Services</a>
-                    <a href="clients.html" class="nav-underline font-semibold">Clients</a>
-                    <a href="contact.html" class="nav-underline font-semibold">Contact</a>
-                    <a href="contact.html" class="cta-btn px-5 py-2 rounded-lg font-bold ml-2 shadow-lg">Get Wholesale Quote</a>
-                </div>
-                <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg border border-hanix/30" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
-                    <svg width="28" height="28" fill="none" stroke="#d8092c" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-                </button>
-            </nav>
-            <!-- Mobile Menu (Responsive) -->
-            <div id="mobile-menu" class="mobile-menu closed fixed top-0 right-0 w-80 max-w-full h-full bg-white shadow-lg z-50 flex flex-col p-8 gap-6 md:hidden" aria-label="Mobile Navigation" aria-hidden="true">
-                <button id="mobile-menu-close" class="self-end mb-4" aria-label="Close menu">
-                    <svg width="32" height="32" fill="none" stroke="#d8092c" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M6 18L18 6"/></svg>
-                </button>
-                <a href="index.html" class="nav-underline font-semibold text-lg active" aria-current="page">Home</a>
-                <a href="about.html" class="nav-underline font-semibold text-lg">About</a>
-                <a href="products.html" class="nav-underline font-semibold text-lg">Products</a>
-                <a href="categories.html" class="nav-underline font-semibold text-lg">Categories</a>
-                <a href="services.html" class="nav-underline font-semibold text-lg">Services</a>
-                <a href="clients.html" class="nav-underline font-semibold text-lg">Clients</a>
-                <a href="contact.html" class="nav-underline font-semibold text-lg">Contact</a>
-                <a href="contact.html" class="cta-btn px-5 py-2 rounded-lg font-bold mt-4">Get Wholesale Quote</a>
+    <!-- Header / Navigation (Hanix Consistent, Responsive) -->
+    <header id="site-header" class="sticky top-0 z-50 bg-white/90 shadow transition-all">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 py-2" aria-label="Main Navigation">
+            <div class="flex items-center gap-3">
+                <span class="font-mont text-2xl font-extrabold gradient-text">Hanix</span>
             </div>
-        </header>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="index.html" class="nav-underline font-semibold active" aria-current="page">Home</a>
+                <a href="about.html" class="nav-underline font-semibold">About</a>
+                <a href="products.html" class="nav-underline font-semibold">Products</a>
+                <a href="categories.html" class="nav-underline font-semibold">Categories</a>
+                <a href="services.html" class="nav-underline font-semibold">Services</a>
+                <a href="clients.html" class="nav-underline font-semibold">Clients</a>
+                <a href="contact.html" class="nav-underline font-semibold">Contact</a>
+                <a href="contact.html" class="cta-btn px-5 py-2 rounded-lg font-bold ml-2 shadow-lg">Get Wholesale
+                    Quote</a>
+            </div>
+            <button id="mobile-menu-btn"
+                class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg border border-hanix/30"
+                aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                <svg width="28" height="28" fill="none" stroke="#d8092c" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu (Responsive) -->
+        <div id="mobile-menu"
+            class="mobile-menu closed fixed top-0 right-0 w-80 max-w-full h-full bg-white shadow-lg z-50 flex flex-col p-8 gap-6 md:hidden"
+            aria-label="Mobile Navigation" aria-hidden="true">
+            <button id="mobile-menu-close" class="self-end mb-4" aria-label="Close menu">
+                <svg width="32" height="32" fill="none" stroke="#d8092c" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M6 6l12 12M6 18L18 6" />
+                </svg>
+            </button>
+            <a href="index.html" class="nav-underline font-semibold text-lg active" aria-current="page">Home</a>
+            <a href="about.html" class="nav-underline font-semibold text-lg">About</a>
+            <a href="products.html" class="nav-underline font-semibold text-lg">Products</a>
+            <a href="categories.html" class="nav-underline font-semibold text-lg">Categories</a>
+            <a href="services.html" class="nav-underline font-semibold text-lg">Services</a>
+            <a href="clients.html" class="nav-underline font-semibold text-lg">Clients</a>
+            <a href="contact.html" class="nav-underline font-semibold text-lg">Contact</a>
+            <a href="contact.html" class="cta-btn px-5 py-2 rounded-lg font-bold mt-4">Get Wholesale Quote</a>
+        </div>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero-section" id="hero">
@@ -71,7 +84,8 @@
                         Premium B2B Bag Manufacturing<br><span class="accent-text">for Global Brands</span>
                     </h1>
                     <p class="hero-subtitle">
-                        We supply high-quality backpacks, travel bags, corporate bags & custom solutions for businesses worldwide.
+                        We supply high-quality backpacks, travel bags, corporate bags & custom solutions for businesses
+                        worldwide.
                     </p>
                     <div class="hero-buttons">
                         <button class="btn btn-primary btn-lg btn-get-quote">
@@ -85,13 +99,16 @@
                 <div class="col-lg-6 hero-images">
                     <div class="hero-mockup-container">
                         <div class="mockup-item mockup-1">
-                            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Backpack" style="width:100%;height:100%;object-fit:cover;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.15);">
+                            <img src="images\product_categories\customized-bag.png" alt="Backpack"
+                                style="width:100%;height:100%;object-fit:cover;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.15);">
                         </div>
                         <div class="mockup-item mockup-2">
-                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Travel Bag" style="width:100%;height:100%;object-fit:cover;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.15);">
+                            <img src="images\product_categories\school-bag.png" alt="Travel Bag"
+                                style="width:100%;height:100%;object-fit:cover;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.15);">
                         </div>
                         <div class="mockup-item mockup-3">
-                            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Corporate Bag" style="width:100%;height:100%;object-fit:cover;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.15);">
+                            <img src="images\product_categories\industrial-bag.png" alt="Corporate Bag"
+                                style="width:100%;height:100%;object-fit:cover;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.15);">
                         </div>
                     </div>
                 </div>
@@ -118,74 +135,87 @@
                 <!-- Category Cards -->
                 <div class="category-card">
                     <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Backpacks" style="width:100%;height:100%;object-fit:cover;">
+                        <img src="images\product_categories\backpack.png" alt="Backpacks"
+                            style="width:100%;height:100%;object-fit:cover;">
                     </div>
                     <div class="category-content">
                         <h3>Backpacks</h3>
-                        <p>Hanix backpacks combine durability and style, perfect for corporate and everyday use. Trusted by global brands for their reliability.</p>
+                        <p>Hanix backpacks combine durability and style, perfect for corporate and everyday use. Trusted
+                            by global brands for their reliability.</p>
                         <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
 
                 <div class="category-card">
                     <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Laptop Bags" style="width:100%;height:100%;object-fit:cover;">
+                        <img src="images\product_categories\laptop-bag.png" alt="Laptop Bags"
+                            style="width:100%;height:100%;object-fit:cover;">
                     </div>
                     <div class="category-content">
                         <h3>Laptop Bags</h3>
-                        <p>Hanix laptop bags offer premium protection and a professional look, designed for business professionals and tech-savvy teams.</p>
+                        <p>Hanix laptop bags offer premium protection and a professional look, designed for business
+                            professionals and tech-savvy teams.</p>
                         <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
 
                 <div class="category-card">
                     <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Travel & Duffle Bags" style="width:100%;height:100%;object-fit:cover;">
+                        <img src="images\product_categories\duffle-bag.png" alt="Travel & Duffle Bags"
+                            style="width:100%;height:100%;object-fit:cover;">
                     </div>
                     <div class="category-content">
                         <h3>Travel & Duffle Bags</h3>
-                        <p>Spacious and robust, Hanix travel and duffle bags are ideal for bulk shipments and frequent travelers.</p>
+                        <p>Spacious and robust, Hanix travel and duffle bags are ideal for bulk shipments and frequent
+                            travelers.</p>
                         <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
 
                 <div class="category-card">
                     <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Corporate Bags" style="width:100%;height:100%;object-fit:cover;">
+                        <img src="images\product_categories\corporate-bag.png" alt="Corporate Bags"
+                            style="width:100%;height:100%;object-fit:cover;">
                     </div>
                     <div class="category-content">
                         <h3>Corporate Bags</h3>
-                        <p>Executive office bags with custom Hanix branding, perfect for corporate gifting and employee use.</p>
+                        <p>Executive office bags with custom Hanix branding, perfect for corporate gifting and employee
+                            use.</p>
                         <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
 
                 <div class="category-card">
                     <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Promotional Bags" style="width:100%;height:100%;object-fit:cover;">
+                        <img src="images\product_categories\promotional-bag.png" alt="Promotional Bags"
+                            style="width:100%;height:100%;object-fit:cover;">
                     </div>
                     <div class="category-content">
                         <h3>Promotional Bags</h3>
-                        <p>Branded promotional bags by Hanix for marketing campaigns and events, customizable for your brand.</p>
+                        <p>Branded promotional bags by Hanix for marketing campaigns and events, customizable for your
+                            brand.</p>
                         <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
 
-                
+
                 <div class="category-card">
                     <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Customized Bags" style="width:100%;height:100%;object-fit:cover;">
+                        <img src="images\product_categories\customized-bag.png" alt="Customized Bags"
+                            style="width:100%;height:100%;object-fit:cover;">
                     </div>
                     <div class="category-content">
                         <h3>Customized Bags</h3>
-                        <p>Fully customizable Hanix bags tailored to your business needs, with endless options for design and branding.</p>
+                        <p>Fully customizable Hanix bags tailored to your business needs, with endless options for
+                            design and branding.</p>
                         <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
 
                 <div class="category-card">
                     <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="School Bags" style="width:100%;height:100%;object-fit:cover;">
+                        <img src="images\product_categories\school-bag.png" alt="School Bags"
+                            style="width:100%;height:100%;object-fit:cover;">
                     </div>
                     <div class="category-content">
                         <h3>School Bags</h3>
@@ -196,11 +226,13 @@
 
                 <div class="category-card">
                     <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Industrial Bags" style="width:100%;height:100%;object-fit:cover;">
+                        <img src="images\product_categories\industrial-bag.png" alt="Industrial Bags"
+                            style="width:100%;height:100%;object-fit:cover;">
                     </div>
                     <div class="category-content">
                         <h3>Industrial Bags</h3>
-                        <p>Heavy-duty Hanix bags for industrial and heavy-use applications, built to last in tough environments.</p>
+                        <p>Heavy-duty Hanix bags for industrial and heavy-use applications, built to last in tough
+                            environments.</p>
                         <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
@@ -214,8 +246,15 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-6">
                     <div class="about-image-container">
-                        <div class="about-image-main"></div>
-                        <div class="about-image-secondary"></div>
+                        <div class="about-image-main">
+                            <img src="images\product_categories\why-choose-img.png" alt="About Us Image"
+                                style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                        </div>
+                        <div class="about-image-secondary">
+                            <img src="images\product_categories\hanix.jpg" alt="Secondary Image"
+                                style="width:100%; height:100%; object-fit: cover; border-radius: 10px;">
+                        </div>
+
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -292,8 +331,8 @@
                     <!-- Product Card 1 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <div class="product-placeholder" style="background: linear-gradient(135deg, #d8092c, #a00620);"></div>
-                            <span class="product-badge">Premium</span>
+                            <img src="images\product_categories\executive-briefcase.png" alt="Executive Briefcase">
+                            <span class="product-badge premium">Premium</span>
                         </div>
                         <div class="product-content">
                             <h3>Executive Briefcase</h3>
@@ -309,8 +348,8 @@
                     <!-- Product Card 2 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <div class="product-placeholder" style="background: linear-gradient(135deg, #2c2c2c, #111111);"></div>
-                            <span class="product-badge">Best Seller</span>
+                            <img src="images\product_categories\urban-bagpack.png" alt="Urban Backpack">
+                            <span class="product-badge best-seller">Best Seller</span>
                         </div>
                         <div class="product-content">
                             <h3>Urban Backpack</h3>
@@ -326,8 +365,8 @@
                     <!-- Product Card 3 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <div class="product-placeholder" style="background: linear-gradient(135deg, #666666, #333333);"></div>
-                            <span class="product-badge">New</span>
+                            <img src="images\product_categories\duffle-bag.png" alt="Travel Duffle Bag">
+                            <span class="product-badge new">New</span>
                         </div>
                         <div class="product-content">
                             <h3>Travel Duffle Bag</h3>
@@ -343,8 +382,8 @@
                     <!-- Product Card 4 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <div class="product-placeholder" style="background: linear-gradient(135deg, #d8092c, #111111);"></div>
-                            <span class="product-badge">Custom</span>
+                            <img src="images\product_categories\corporate-messenger.png" alt="Corporate Messenger">
+                            <span class="product-badge custom">Custom</span>
                         </div>
                         <div class="product-content">
                             <h3>Corporate Messenger</h3>
@@ -358,10 +397,10 @@
                     </div>
 
                     <!-- Product Card 5 -->
-                    <div class="product-card">
+                    <!-- <div class="product-card">
                         <div class="product-image">
-                            <div class="product-placeholder" style="background: linear-gradient(135deg, #4CAF50, #2d7a2d);"></div>
-                            <span class="product-badge">Eco-Friendly</span>
+                            <img src="images/sustainable-tote.jpg" alt="Sustainable Tote">
+                            <span class="product-badge eco">Eco-Friendly</span>
                         </div>
                         <div class="product-content">
                             <h3>Sustainable Tote</h3>
@@ -372,18 +411,16 @@
                             </div>
                             <a href="#" class="product-link">View Details <i class="fas fa-arrow-right"></i></a>
                         </div>
-                    </div>
+                    </div> -->
+                    <!-- Navigation Arrows -->
+                    <button class="carousel-nav carousel-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-nav carousel-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
-
-                <!-- Navigation Arrows -->
-                <button class="carousel-nav carousel-prev">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-nav carousel-next">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
             </div>
-        </div>
     </section>
 
     <!-- B2B Services Section -->
@@ -404,7 +441,8 @@
                         <i class="fas fa-cogs"></i>
                     </div>
                     <h3>OEM & ODM Manufacturing</h3>
-                    <p>Original Equipment Manufacturing and Original Design Manufacturing services tailored to your specifications</p>
+                    <p>Original Equipment Manufacturing and Original Design Manufacturing services tailored to your
+                        specifications</p>
                 </div>
 
                 <!-- Service Card 2 -->
@@ -517,7 +555,8 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Excellent quality and professional service. Their team understood our requirements and delivered beyond expectations."</p>
+                    <p class="testimonial-text">"Excellent quality and professional service. Their team understood our
+                        requirements and delivered beyond expectations."</p>
                     <p class="testimonial-author">- John Smith, Distribution Manager</p>
                 </div>
 
@@ -529,7 +568,8 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Fast turnaround time and consistently high-quality products. They've been our preferred supplier for 3 years."</p>
+                    <p class="testimonial-text">"Fast turnaround time and consistently high-quality products. They've
+                        been our preferred supplier for 3 years."</p>
                     <p class="testimonial-author">- Sarah Johnson, Procurement Lead</p>
                 </div>
 
@@ -541,82 +581,81 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Outstanding customization support and attention to detail. Highly recommended for all B2B requirements."</p>
+                    <p class="testimonial-text">"Outstanding customization support and attention to detail. Highly
+                        recommended for all B2B requirements."</p>
                     <p class="testimonial-author">- Michael Chen, Retail Director</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact / Inquiry Section -->
-    <section class="contact-section" id="contact">
-        <div class="contact-background"></div>
-        <div class="container-xxl py-5 position-relative">
-            <div class="row gy-5">
-                <div class="col-lg-6">
-                    <h2 class="section-title text-white mb-4">Ready to Order?</h2>
-                    <p class="section-subtitle mb-4">Get in touch with our B2B team for wholesale quotes and bulk orders</p>
-                    
-                    <div class="contact-info-list">
-                        <div class="contact-info-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h5>Phone</h5>
-                                <p>+1 (800) 123-4567</p>
-                            </div>
+<section class="contact-section" id="contact">
+    <!-- Decorative Background -->
+    <div class="contact-background"></div>
+
+    <div class="container-xxl">
+        <div class="row gy-5 align-items-center">
+            <!-- Left Column: Info -->
+            <div class="col-lg-6 text-white contact-info-col">
+                <h2 class="section-title mb-4 text-white">Ready to Order?</h2>
+                <p class="section-subtitle mb-4 text-black">Get in touch with our B2B team for wholesale quotes and bulk orders.</p>
+
+                <div class="contact-info-list">
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h5>Phone</h5>
+                            <p>+91 9594342834</p>
+                            <p>+91 8108939194</p>
                         </div>
-                        <div class="contact-info-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h5>Email</h5>
-                                <p>wholesale@bagpro.com</p>
-                            </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h5>Email</h5>
+                            <p>premiumhanix@gmail.com</p>
                         </div>
-                        <div class="contact-info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h5>Location</h5>
-                                <p>New York, USA</p>
-                            </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h5>Location</h5>
+                            <p>Kalyan, Maharashatra</p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-lg-6">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Full Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email Address" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Company Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Quantity Needed" required>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" required>
-                                <option value="">Select Bag Type</option>
-                                <option value="backpack">Backpack</option>
-                                <option value="laptop">Laptop Bag</option>
-                                <option value="travel">Travel Bag</option>
-                                <option value="corporate">Corporate Bag</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Additional Details" rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg w-100">
-                            <i class="fas fa-paper-plane me-2"></i>Request Wholesale Quote
-                        </button>
-                    </form>
-                </div>
+            <!-- Right Column: Form -->
+            <div class="col-lg-6">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Company Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Quantity Needed" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Bag Type e.g.Laptop bag" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Additional Details" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="fas fa-paper-plane me-2"></i>Request Wholesale Quote
+                    </button>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer class="footer-section">
@@ -624,7 +663,8 @@
             <div class="row gy-4">
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5 class="footer-title">Hanix</h5>
-                    <p>Hanix is a leading B2B bag manufacturer for global wholesale distribution and custom solutions.</p>
+                    <p>Hanix is a leading B2B bag manufacturer for global wholesale distribution and custom solutions.
+                    </p>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5 class="footer-title">Products</h5>
@@ -665,8 +705,9 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
+
 </html>

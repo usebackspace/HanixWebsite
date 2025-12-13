@@ -1265,3 +1265,551 @@ footer hr {
 .z-5 {
     z-index: 5;
 }
+
+/* =============================
+   RESPONSIVE ENHANCEMENTS ONLY
+   (Appended after all existing CSS)
+   ============================= */
+
+/* Base safety: prevent horizontal scroll on very small screens */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Ensure containers never overflow viewport */
+.container,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Hero images: keep design but avoid overflow on small screens */
+.hero-mockup-container,
+.hero-images img {
+  max-width: 100%;
+}
+
+/* Category cards: keep grid look but allow wrapping nicely */
+.category-grid {
+  width: 100%;
+}
+
+/* Products carousel: allow horizontal scroll on small screens
+   while keeping card visual design intact */
+.products-track {
+  width: auto;
+}
+
+/* Testimonial cards: ensure text area does not overflow */
+.testimonial-card {
+  max-width: 100%;
+}
+
+/* Contact form: ensure full width on narrow screens */
+.contact-form {
+  width: 100%;
+}
+
+/* Footer columns: allow stacking naturally on smaller screens */
+.footer-section .row {
+  width: 100%;
+}
+
+/* =========================================
+   BREAKPOINTS
+   ========================================= */
+
+/* <= 1200px: gently relax any rigid widths */
+@media (max-width: 1200px) {
+  .hero-section,
+  .about-section,
+  .products-section,
+  .services-section,
+  .testimonials-section,
+  .contact-section,
+  .footer-section {
+    width: 100%;
+  }
+
+  .hero-content,
+  .hero-images,
+  .about-image-container {
+    max-width: 100%;
+  }
+
+  .products-carousel {
+    padding: 0 1rem;
+  }
+
+  .carousel-prev {
+    left: 0;
+  }
+
+  .carousel-next {
+    right: 0;
+  }
+}
+
+/* <= 992px: allow columns to stack while preserving visual style */
+@media (max-width: 992px) {
+  /* Hero layout: already uses flex-column-reverse in HTML,
+     so just ensure spacing behaves well */
+  .hero-section .row {
+    row-gap: 2rem;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-images {
+    margin-bottom: 1.5rem;
+  }
+
+  /* About sections */
+  .about-section .row {
+    row-gap: 2rem;
+  }
+
+  .about-image-container {
+    height: auto;
+  }
+
+  /* Products: narrow card width slightly to avoid wrapping glitches */
+  .products-track {
+    gap: 1.5rem;
+  }
+
+  .product-card {
+    max-width: 320px;
+  }
+
+  /* Services grid: one or two per row without changing card style */
+  .services-grid {
+    width: 100%;
+  }
+
+  /* Contact layout */
+  .contact-section .row {
+    row-gap: 2rem;
+  }
+
+  /* Footer: allow 2-column wrapping while keeping design */
+  .footer-section .row {
+    row-gap: 2rem;
+  }
+}
+
+/* <= 768px: mobile and small tablets */
+@media (max-width: 768px) {
+  /* Header: space for logo + burger + CTA without overlap */
+  #site-header nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Ensure desktop nav remains hidden as per existing classes.
+     No visual change, just safety */
+  nav .md\:flex {
+    display: none;
+  }
+
+  /* Mobile menu width stays 80 but constrained to viewport already.
+     Ensure no horizontal scroll when open */
+  .mobile-menu {
+    max-width: 100%;
+  }
+
+  /* Hero typography is already reduced; keep container padded */
+  .hero-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Category cards: single-column feel on very small screens
+     while grid design remains */
+  .category-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .category-card {
+    max-width: 100%;
+  }
+
+  /* Products carousel: allow horizontal scroll with preserved design */
+  .products-carousel {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .products-track {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .product-card {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+
+  /* Services: cards full width with same visual design */
+  .services-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .service-card {
+    width: 100%;
+  }
+
+  /* Clients grid: avoid tiny columns */
+  .clients-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  /* Contact: form full width below text */
+  .contact-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  /* Footer: stack columns */
+  .footer-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .footer-section .col-lg-3,
+  .footer-section .col-md-6 {
+    width: 100%;
+  }
+}
+
+/* <= 576px: very small phones */
+@media (max-width: 576px) {
+  /* Tighten side paddings while keeping same core layout */
+  .hero-section,
+  .category-section,
+  .about-section,
+  .products-section,
+  .services-section,
+  .testimonials-section,
+  .contact-section,
+  .footer-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Ensure big headings never cause overflow */
+  .section-title {
+    word-wrap: break-word;
+  }
+
+  .hero-title {
+    word-wrap: break-word;
+  }
+
+  /* Product cards occupy nearly full width */
+  .product-card {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+
+  /* Testimonial text: keep comfortable width */
+  .testimonial-card {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* Contact info items: avoid icon + text overflow */
+  .contact-info-item {
+    align-items: flex-start;
+  }
+
+  /* Footer copyright text stays on a single column */
+  .footer-section .row.text-center .col-12 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+
+/* Smooth hide/show for sticky header */
+#site-header {
+  will-change: transform;
+  transition: transform 0.3s ease;
+}
+
+/* Hidden state: slide header up */
+#site-header.nav-hidden {
+  transform: translateY(-100%);
+}
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1100;
+  will-change: transform;
+  transition: transform 0.3s ease;
+}
+
+#site-header.nav-hidden {
+  transform: translateY(-100%);
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 280px;
+    margin: 0 10px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.product-badge.premium { background: #d8092c; }
+.product-badge.best-seller { background: #2c2c2c; }
+.product-badge.new { background: #666666; }
+.product-badge.custom { background: #d88020; }
+.product-badge.eco { background: #4CAF50; }
+
+.product-content {
+    padding: 15px;
+}
+
+.product-content h3 {
+    font-size: 18px;
+    margin: 0 0 8px;
+    color: #111;
+}
+
+.product-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.product-specs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.product-specs .spec {
+    font-size: 12px;
+    color: #999;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.product-link {
+    display: inline-block;
+    font-size: 14px;
+    color: #d8092c;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.product-link i {
+    margin-left: 5px;
+}
+
+.product-link:hover {
+    color: #a00620;
+}
+
+/* Contact Section */
+.contact-section {
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0;
+    background: linear-gradient(135deg, #d8092c, #a00620);
+}
+
+.contact-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #d8092c, #a00620);
+    z-index: 0;
+}
+
+/* Text & Info Column */
+.contact-info-col {
+    z-index: 1;
+    position: relative;
+}
+
+.contact-info-list {
+    margin-top: 20px;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.contact-info-item i {
+    font-size: 2rem;
+    margin-right: 15px;
+    color: #fff;
+}
+
+.contact-info-item h5 {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.contact-info-item p {
+    margin: 0;
+    color: #fff;
+}
+
+/* Form Column */
+.contact-form {
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form .form-control {
+    border-radius: 5px;
+    padding: 12px 15px;
+    font-size: 1rem;
+}
+
+.contact-form select.form-control {
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><polygon points="0,0 12,0 6,6" fill="%23666"/></svg>') no-repeat right 10px center;
+    background-size: 12px;
+}
+
+.contact-form button {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contact-form {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .contact-info-item i {
+        font-size: 1.5rem;
+    }
+
+    .contact-form {
+        padding: 20px 15px;
+    }
+}
+
+.contact-form select.form-control {
+  width: 100% !important;  /* Force full width */
+  max-width: 100%;         /* Prevent overflow */
+  box-sizing: border-box;  /* Include padding in width */
+  appearance: none;        /* Remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><polygon points="0,0 12,0 6,6" fill="%23666"/></svg>') no-repeat right 10px center;
+  background-size: 12px;
+  padding-right: 35px;     /* Add space for custom arrow */
+  font-size: 1rem;
+}
+
+/* Also ensure the container */
+.contact-form .form-group {
+  position: relative;      /* to contain the select */
+  width: 100%;
+}
+
+.contact-form {
+  max-width: 100%;
+  width: 100%;
+}
+
+.contact-form .form-group {
+  width: 100%;
+  position: relative;
+  overflow: visible; /* Ensure dropdown can show */
+}
