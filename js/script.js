@@ -644,3 +644,51 @@ window.addEventListener('load', () => {
 })();
 
 
+new Swiper('.category-slider', {
+    slidesPerView: 4,
+    spaceBetween: 25,
+    loop: true,
+    speed: 800,
+
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    breakpoints: {
+        0: { slidesPerView: 1 },
+        576: { slidesPerView: 2 },
+        992: { slidesPerView: 3 },
+        1200: { slidesPerView: 4 },
+    }
+});
+
+new Swiper('.products-slider', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    speed: 800,
+
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    breakpoints: {
+        0: { slidesPerView: 1 },
+        576: { slidesPerView: 2 },
+        992: { slidesPerView: 3 },
+        1200: { slidesPerView: 4 },
+    }
+});
+

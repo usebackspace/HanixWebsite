@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hanix | Laptop Backpack</title>
+
+<style>
+:root {
+  --primary: #d8092c;
+  --text-dark: #333;
+  --text-medium: #666;
+  --border-light: #e6e6e6;
+  --background: #fff;
+  --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; font-family: var(--font-family); margin:0; padding:0; }
+body { background:#f7f7f7; color: var(--text-dark); line-height:1.5; }
+
+.container { max-width: 1200px; margin:24px auto; background:#fff; border-radius:8px; padding:24px; box-shadow:0 2px 12px rgba(0,0,0,.1); }
+
+/* Breadcrumb */
+.breadcrumb { font-size:14px; margin-bottom:16px; color:var(--text-medium); }
+
+/* Product layout */
+.product { display:flex; gap:32px; flex-wrap:wrap; }
+.gallery { display:flex; gap:16px; flex-wrap:wrap; }
+.thumbs { display:flex; flex-direction:column; gap:12px; }
+.thumbs img { width:64px; height:64px; object-fit:cover; border:1.5px solid var(--border-light); border-radius:6px; cursor:pointer; }
+.thumbs img.active { border-color: var(--primary); }
+.main-img { width:420px; height:420px; border:1.5px solid var(--border-light); border-radius:10px; overflow:hidden; cursor:zoom-in; display:flex; align-items:center; justify-content:center; }
+.main-img img { width:100%; height:100%; object-fit:contain; transition: transform .45s ease; will-change: transform; transform: translateZ(0); }
+.main-img:hover img { transform: scale(2.4); }
+
+/* Details */
+.details { flex:1; display:flex; flex-direction:column; }
+h1 { font-size:24px; margin-bottom:8px; }
+.brand, .rating { font-size:14px; color: var(--text-medium); margin-bottom:8px; }
+
+.price-box { border:1.5px solid var(--border-light); border-radius:8px; padding:16px; margin-bottom:24px; }
+.price-row { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid var(--border-light); }
+.price-row:last-child { border-bottom:none; font-weight:700; color:var(--primary); }
+
+.section { margin-bottom:24px; }
+.options { display:flex; gap:12px; flex-wrap:wrap; }
+.option { border:1.5px solid var(--border-light); padding:8px 16px; border-radius:6px; cursor:pointer; }
+.option.active { border-color:var(--primary); color:var(--primary); font-weight:600; }
+
+.actions { display:flex; gap:16px; }
+.btn { flex:1; padding:14px; border-radius:30px; border:none; cursor:pointer; font-weight:600; }
+.btn.primary { background:var(--primary); color:#fff; }
+.btn.secondary { border:2px solid var(--primary); color:var(--primary); background:#fff; }
+
+/* Tabs */
+.product-info { margin-top:48px; }
+.info-tabs { display:flex; gap:32px; border-bottom:1.5px solid var(--border-light); position:sticky; top:0; background:#fff; z-index:100; }
+.tab { background:none; border:none; padding:14px 0; font-weight:600; cursor:pointer; color:var(--text-medium); }
+.tab.active { color:var(--text-dark); border-bottom:3px solid var(--primary); }
+.tab-content { display:none; margin-top:24px; }
+.tab-content.active { display:block; }
+
+/* Attributes table */
+.attr-table { width:100%; border-collapse:collapse; }
+.attr-table td { border:1px solid var(--border-light); padding:12px; }
+.attr-table td:nth-child(odd) { background:#fafafa; font-weight:600; }
+
+/* Reviews */
+.reviews-section { margin-top:56px; border-top:1.5px solid var(--border-light); padding-top:32px; }
+.bar-row { display:flex; align-items:center; gap:10px; font-size:13px; margin-bottom:6px; }
+.bar { flex:1; height:8px; background:#eee; border-radius:4px; overflow:hidden; }
+.bar i { display:block; height:100%; background:var(--primary); }
+
+.rating-bars { min-width:260px; }
+
+/* Cart */
+.cart { position:fixed; right:-360px; top:0; width:360px; height:100%; background:#fff; padding:24px; box-shadow:-4px 0 12px rgba(0,0,0,.15); transition:right .3s ease; z-index:1000; }
+.cart.open { right:0; }
+.cart-item { display:flex; justify-content:space-between; margin-bottom:16px; }
+.cart-item button { padding:4px 8px; }
+
+/* Responsive */
+@media (max-width:900px) {
+  .product { flex-direction:column; }
+  .main-img { width:100%; height:auto; }
+  .thumbs { flex-direction:row; overflow-x:auto; }
+}
+/* Sticky actions */
+.sticky-actions {
+  position: sticky;
+  top: 20px; /* distance from top of viewport */
+  display: flex;
+  gap: 16px;
+  flex-direction: column; /* vertical stacking on smaller screens */
+  z-index: 50;
+}
+
+@media (min-width: 600px) {
+  .sticky-actions {
+    flex-direction: row; /* side-by-side on wider screens */
+  }
+}
+/* Ensure all thumbnails are same size */
+.thumbs img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover; /* crop to fill container without distortion */
+  border: 1.5px solid var(--border-light);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Main image responsive */
+.main-img {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1; /* keeps it square on mobile */
+  border: 1.5px solid var(--border-light);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: zoom-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main image scaling */
+.main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* fits without stretching */
+  transition: transform 0.8s ease; /* slower zoom */
+}
+
+/* Mobile gallery adjustments */
+@media (max-width: 900px) {
+  .product {
+    flex-direction: column;
+  }
+  .main-img {
+    height: auto;
+  }
+  .thumbs {
+    flex-direction: row;
+    gap: 8px;
+    overflow-x: auto;
+  }
+  .thumbs img {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+  }
+}
+
+</style>
+</head>
+
+<body>
+<div class="container" role="main">
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    Luggage, Bags &amp; Cases &gt; Backpacks &gt; Laptop Backpacks
+  </nav>
+
+  <h1>Men's High-Quality Fashion Backpack Large Capacity Durable PC Waterproof Zipper for Business Travel Outdoor Commuting</h1>
+  <div class="rating">⭐⭐⭐⭐☆ 3.5 (6 reviews) · 98 sold</div>
+  <div class="brand">Hanix Official Store</div>
+
+  <section class="product">
+    <aside class="gallery">
+      <div class="thumbs">
+        <img src="images/product_categories/school-bag.png" alt="Gray" class="active" loading="lazy" onclick="switchImage(this)">
+        <img src="images/product_categories/backpack.png" alt="Black" loading="lazy" onclick="switchImage(this)">
+        <img src="images/product_categories/corporate-bag.png" alt="Green" loading="lazy" onclick="switchImage(this)">
+        <img src="images/product_categories/duffle-bag.png" alt="Blue" loading="lazy" onclick="switchImage(this)">
+      </div>
+      <div class="main-img">
+        <img id="mainImage" src="images/product_categories/school-bag.png" alt="Main product image" loading="lazy">
+      </div>
+    </aside>
+
+    <div class="details">
+      <div class="price-box">
+        <div class="price-row"><span>2–99 pieces</span><span>₹313.04</span></div>
+        <div class="price-row"><span>100–199 pieces</span><span>₹303.69</span></div>
+        <div class="price-row"><span>200–9999 pieces</span><span>₹294.35</span></div>
+        <div class="price-row"><span>≥ 10000 pieces</span><span>₹182.22</span></div>
+      </div>
+
+      <div class="section">
+        <h3>Color</h3>
+        <div class="options">
+          <div class="option active" onclick="selectOption(this)">Gray</div>
+          <div class="option" onclick="selectOption(this)">Black</div>
+          <div class="option" onclick="selectOption(this)">Green</div>
+          <div class="option" onclick="selectOption(this)">Blue</div>
+        </div>
+      </div>
+
+      <div class="actions sticky-actions">
+        <button class="btn primary" onclick="addToCart()">Send Enquiry</button>
+        <button class="btn secondary" onclick="buyNow()">Chat Now</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Tabs -->
+  <section class="product-info">
+    <div class="info-tabs">
+      <button class="tab active" onclick="switchTab('attributes')">Attributes</button>
+      <button class="tab" onclick="switchTab('reviews')">Reviews</button>
+      <button class="tab" onclick="switchTab('supplier')">Supplier</button>
+      <button class="tab" onclick="switchTab('description')">Description</button>
+    </div>
+
+    <div class="tab-content active" id="attributes">
+      <table class="attr-table">
+        <tr><td>Main Material</td><td>Oxford</td><td>Type</td><td>Softback</td></tr>
+        <tr><td>Capacity</td><td>20–35L</td><td>Feature</td><td>Large Capacity, Durable</td></tr>
+        <tr><td>Interior</td><td>Computer Interlayer</td><td>Closure</td><td>Zipper</td></tr>
+        <tr><td>Gender</td><td>Unisex</td><td>Style</td><td>Fashion</td></tr>
+        <tr><td>Place</td><td>Hebei, China</td><td>Brand</td><td>OEM</td></tr>
+      </table>
+    </div>
+
+    <div class="tab-content" id="reviews"><p>No reviews yet.</p></div>
+    <div class="tab-content" id="supplier"><p>Hanix Official Store<br>OEM & Bulk Supplier</p></div>
+    <div class="tab-content" id="description"><p>Waterproof Oxford laptop backpack for business, travel and commuting.</p></div>
+  </section>
+</div>
+
+
+
+<script>
+/* Image switch */
+function switchImage(el){
+  document.querySelectorAll('.thumbs img').forEach(img=>img.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('mainImage').src = el.src;
+}
+
+/* Option select */
+function selectOption(el){
+  el.parentElement.querySelectorAll('.option').forEach(o=>o.classList.remove('active'));
+  el.classList.add('active');
+}
+
+/* Tabs */
+function switchTab(id){
+  document.querySelectorAll('.tab').forEach(tab=>tab.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+  document.querySelector(`[onclick="switchTab('${id}')"]`).classList.add('active');
+  document.getElementById(id).classList.add('active');
+}
+
+function addToCart(){ alert("Added to cart!"); }
+function buyNow(){ alert("Starting chat..."); }
+
+/* Zoom follow */
+const zoomContainer = document.querySelector('.main-img');
+const zoomImg = document.getElementById('mainImage');
+zoomContainer.addEventListener('mousemove', e=>{
+  const rect=zoomContainer.getBoundingClientRect();
+  const x=((e.clientX-rect.left)/rect.width)*100;
+  const y=((e.clientY-rect.top)/rect.height)*100;
+  zoomImg.style.transformOrigin = `${x}% ${y}%`;
+});
+zoomContainer.addEventListener('mouseleave',()=>{zoomImg.style.transformOrigin='center';});
+</script>
+</body>
+</html>

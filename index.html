@@ -23,7 +23,10 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -38,7 +41,7 @@
             <div class="hidden md:flex items-center gap-6">
                 <a href="index.html" class="nav-underline font-semibold active" aria-current="page">Home</a>
                 <a href="about.html" class="nav-underline font-semibold">About</a>
-                <a href="products.html" class="nav-underline font-semibold">Products</a>
+                <a href="product.html" class="nav-underline font-semibold">Products</a>
                 <a href="categories.html" class="nav-underline font-semibold">Categories</a>
                 <a href="services.html" class="nav-underline font-semibold">Services</a>
                 <a href="clients.html" class="nav-underline font-semibold">Clients</a>
@@ -124,121 +127,270 @@
 
     <!-- Category Showcase Section -->
     <section class="category-section" id="categories">
-        <div class="container-xxl py-5">
-            <div class="section-header text-center mb-5">
-                <h2 class="section-title">Our Product Categories</h2>
-                <p class="section-subtitle">Comprehensive range of bags for every business need</p>
-                <div class="divider"></div>
-            </div>
+    <div class="container-xxl py-5">
 
-            <div class="category-grid">
-                <!-- Category Cards -->
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="images\product_categories\backpack.png" alt="Backpacks"
-                            style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div class="category-content">
-                        <h3>Backpacks</h3>
-                        <p>Hanix backpacks combine durability and style, perfect for corporate and everyday use. Trusted
-                            by global brands for their reliability.</p>
-                        <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="images\product_categories\laptop-bag.png" alt="Laptop Bags"
-                            style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div class="category-content">
-                        <h3>Laptop Bags</h3>
-                        <p>Hanix laptop bags offer premium protection and a professional look, designed for business
-                            professionals and tech-savvy teams.</p>
-                        <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="images\product_categories\duffle-bag.png" alt="Travel & Duffle Bags"
-                            style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div class="category-content">
-                        <h3>Travel & Duffle Bags</h3>
-                        <p>Spacious and robust, Hanix travel and duffle bags are ideal for bulk shipments and frequent
-                            travelers.</p>
-                        <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="images\product_categories\corporate-bag.png" alt="Corporate Bags"
-                            style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div class="category-content">
-                        <h3>Corporate Bags</h3>
-                        <p>Executive office bags with custom Hanix branding, perfect for corporate gifting and employee
-                            use.</p>
-                        <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="images\product_categories\promotional-bag.png" alt="Promotional Bags"
-                            style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div class="category-content">
-                        <h3>Promotional Bags</h3>
-                        <p>Branded promotional bags by Hanix for marketing campaigns and events, customizable for your
-                            brand.</p>
-                        <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-
-
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="images\product_categories\customized-bag.png" alt="Customized Bags"
-                            style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div class="category-content">
-                        <h3>Customized Bags</h3>
-                        <p>Fully customizable Hanix bags tailored to your business needs, with endless options for
-                            design and branding.</p>
-                        <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="images\product_categories\school-bag.png" alt="School Bags"
-                            style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div class="category-content">
-                        <h3>School Bags</h3>
-                        <p>Ergonomic Hanix school bags with quality craftsmanship for students of all ages.</p>
-                        <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="images\product_categories\industrial-bag.png" alt="Industrial Bags"
-                            style="width:100%;height:100%;object-fit:cover;">
-                    </div>
-                    <div class="category-content">
-                        <h3>Industrial Bags</h3>
-                        <p>Heavy-duty Hanix bags for industrial and heavy-use applications, built to last in tough
-                            environments.</p>
-                        <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </div>
+        <div class="section-header text-center mb-5">
+            <h2 class="section-title">Our Product Categories</h2>
+            <p class="section-subtitle">Comprehensive range of bags for every business need</p>
+            <div class="divider"></div>
         </div>
-    </section>
+
+        <div class="swiper category-slider">
+            <div class="swiper-wrapper">
+
+                <!-- Backpacks -->
+                <div class="swiper-slide">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/product_categories/backpack.png" alt="Backpacks">
+                        </div>
+                        <div class="category-content">
+                            <h3>Backpacks</h3>
+                            <p>Hanix backpacks combine durability and style, perfect for corporate use.</p>
+                            <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Laptop Bags -->
+                <div class="swiper-slide">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/product_categories/laptop-bag.png" alt="Laptop Bags">
+                        </div>
+                        <div class="category-content">
+                            <h3>Laptop Bags</h3>
+                            <p>Hanix laptop bags offer premium protection and a professional look.</p>
+                            <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Travel & Duffle Bags -->
+                <div class="swiper-slide">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/product_categories/duffle-bag.png" alt="Travel & Duffle Bags">
+                        </div>
+                        <div class="category-content">
+                            <h3>Travel & Duffle Bags</h3>
+                            <p>Spacious and robust, ideal for bulk shipments and frequent travelers.</p>
+                            <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corporate Bags -->
+                <div class="swiper-slide">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/product_categories/corporate-bag.png" alt="Corporate Bags">
+                        </div>
+                        <div class="category-content">
+                            <h3>Corporate Bags</h3>
+                            <p>Executive office bags with custom branding for corporate gifting.</p>
+                            <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Promotional Bags -->
+                <div class="swiper-slide">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/product_categories/promotional-bag.png" alt="Promotional Bags">
+                        </div>
+                        <div class="category-content">
+                            <h3>Promotional Bags</h3>
+                            <p>Branded promotional bags for marketing campaigns and events.</p>
+                            <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customized Bags -->
+                <div class="swiper-slide">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/product_categories/customized-bag.png" alt="Customized Bags">
+                        </div>
+                        <div class="category-content">
+                            <h3>Customized Bags</h3>
+                            <p>Fully customizable bags tailored to your business needs.</p>
+                            <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- School Bags -->
+                <div class="swiper-slide">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/product_categories/school-bag.png" alt="School Bags">
+                        </div>
+                        <div class="category-content">
+                            <h3>School Bags</h3>
+                            <p>Ergonomic school bags with quality craftsmanship for students.</p>
+                            <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Navigation Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+    </div>
+</section>
+<!-- Video Card Section   -->
+<section class="video-cards-section">
+  <h2 class="section-title" style="text-align:center; margin-bottom:20px;">PICK WHAT YOU NEED</h2>
+  <div class="cards-container">
+
+    <div class="video-card">
+      <video autoplay muted loop playsinline>
+        <source src="path/to/video1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="card-info">
+        <strong>VIP URBAN</strong><br>
+        ₹ 4,500 <span class="mrp">MRP 7,500</span>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video autoplay muted loop playsinline>
+        <source src="path/to/video2.mp4" type="video/mp4" />
+      </video>
+      <div class="card-info">
+        <strong>VIP VOGUE</strong><br>
+        ₹ 4,050 <span class="mrp">MRP 6,750</span>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video autoplay muted loop playsinline>
+        <source src="path/to/video3.mp4" type="video/mp4" />
+      </video>
+      <div class="card-info">
+        <strong>VIP URBAN</strong><br>
+        ₹ 4,500 <span class="mrp">MRP 7,500</span>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video autoplay muted loop playsinline>
+        <source src="path/to/video4.mp4" type="video/mp4" />
+      </video>
+      <div class="card-info">
+        <strong>VIP LEGACY</strong><br>
+        ₹ 4,950 <span class="mrp">MRP 8,250</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Featured Products Carousel Section -->
+    <section class="products-section" id="products">
+    <div class="container-xxl py-5">
+        <div class="section-header text-center mb-5">
+            <h2 class="section-title">Featured Products</h2>
+            <p class="section-subtitle">Best-selling bags trusted by distributors</p>
+            <div class="divider"></div>
+        </div>
+
+        <!-- Swiper Carousel -->
+        <div class="swiper products-slider">
+            <div class="swiper-wrapper">
+
+                <!-- Product 1 -->
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product_categories/executive-briefcase.png" alt="Executive Briefcase">
+                            <span class="product-badge premium">Premium</span>
+                        </div>
+                        <div class="product-content">
+                            <h3>Executive Briefcase</h3>
+                            <p>Professional leather briefcase with laptop compartment</p>
+                            <div class="product-specs">
+                                <span class="spec"><i class="fas fa-cube"></i> 500+ units</span>
+                                <span class="spec"><i class="fas fa-palette"></i> 8 colors</span>
+                            </div>
+                            <a href="#" class="product-link">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product_categories/urban-bagpack.png" alt="Urban Backpack">
+                            <span class="product-badge best-seller">Best Seller</span>
+                        </div>
+                        <div class="product-content">
+                            <h3>Urban Backpack</h3>
+                            <p>Modern backpack with USB charging port</p>
+                            <div class="product-specs">
+                                <span class="spec"><i class="fas fa-cube"></i> 1000+ units</span>
+                                <span class="spec"><i class="fas fa-palette"></i> 6 colors</span>
+                            </div>
+                            <a href="#" class="product-link">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product_categories/duffle-bag.png" alt="Travel Duffle Bag">
+                            <span class="product-badge new">New</span>
+                        </div>
+                        <div class="product-content">
+                            <h3>Travel Duffle Bag</h3>
+                            <p>Spacious travel bag with expandable compartments</p>
+                            <div class="product-specs">
+                                <span class="spec"><i class="fas fa-cube"></i> 300+ units</span>
+                                <span class="spec"><i class="fas fa-palette"></i> 4 colors</span>
+                            </div>
+                            <a href="#" class="product-link">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product_categories/corporate-messenger.png" alt="Corporate Messenger">
+                            <span class="product-badge custom">Custom</span>
+                        </div>
+                        <div class="product-content">
+                            <h3>Promotional Bags</h3>
+                            <p>Elegant messenger bag for business professionals</p>
+                            <div class="product-specs">
+                                <span class="spec"><i class="fas fa-cube"></i> 750+ units</span>
+                                <span class="spec"><i class="fas fa-palette"></i> 10 colors</span>
+                            </div>
+                            <a href="#" class="product-link">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Navigation Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+    </div>
+</section>
 
     <!-- About / Why Choose Us Section -->
     <section class="about-section" id="about">
@@ -317,111 +469,7 @@
         </div>
     </section>
 
-    <!-- Featured Products Carousel Section -->
-    <section class="products-section" id="products">
-        <div class="container-xxl py-5">
-            <div class="section-header text-center mb-5">
-                <h2 class="section-title">Featured Products</h2>
-                <p class="section-subtitle">Best-selling bags trusted by distributors</p>
-                <div class="divider"></div>
-            </div>
-
-            <div class="products-carousel">
-                <div class="products-track">
-                    <!-- Product Card 1 -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images\product_categories\executive-briefcase.png" alt="Executive Briefcase">
-                            <span class="product-badge premium">Premium</span>
-                        </div>
-                        <div class="product-content">
-                            <h3>Executive Briefcase</h3>
-                            <p>Professional leather briefcase with laptop compartment</p>
-                            <div class="product-specs">
-                                <span class="spec"><i class="fas fa-cube"></i> 500+ units</span>
-                                <span class="spec"><i class="fas fa-palette"></i> 8 colors</span>
-                            </div>
-                            <a href="#" class="product-link">View Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Product Card 2 -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images\product_categories\urban-bagpack.png" alt="Urban Backpack">
-                            <span class="product-badge best-seller">Best Seller</span>
-                        </div>
-                        <div class="product-content">
-                            <h3>Urban Backpack</h3>
-                            <p>Modern backpack with USB charging port</p>
-                            <div class="product-specs">
-                                <span class="spec"><i class="fas fa-cube"></i> 1000+ units</span>
-                                <span class="spec"><i class="fas fa-palette"></i> 6 colors</span>
-                            </div>
-                            <a href="#" class="product-link">View Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Product Card 3 -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images\product_categories\duffle-bag.png" alt="Travel Duffle Bag">
-                            <span class="product-badge new">New</span>
-                        </div>
-                        <div class="product-content">
-                            <h3>Travel Duffle Bag</h3>
-                            <p>Spacious travel bag with expandable compartments</p>
-                            <div class="product-specs">
-                                <span class="spec"><i class="fas fa-cube"></i> 300+ units</span>
-                                <span class="spec"><i class="fas fa-palette"></i> 4 colors</span>
-                            </div>
-                            <a href="#" class="product-link">View Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Product Card 4 -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images\product_categories\corporate-messenger.png" alt="Corporate Messenger">
-                            <span class="product-badge custom">Custom</span>
-                        </div>
-                        <div class="product-content">
-                            <h3>Corporate Messenger</h3>
-                            <p>Elegant messenger bag for business professionals</p>
-                            <div class="product-specs">
-                                <span class="spec"><i class="fas fa-cube"></i> 750+ units</span>
-                                <span class="spec"><i class="fas fa-palette"></i> 10 colors</span>
-                            </div>
-                            <a href="#" class="product-link">View Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Product Card 5 -->
-                    <!-- <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/sustainable-tote.jpg" alt="Sustainable Tote">
-                            <span class="product-badge eco">Eco-Friendly</span>
-                        </div>
-                        <div class="product-content">
-                            <h3>Sustainable Tote</h3>
-                            <p>Eco-friendly tote bag made from recycled materials</p>
-                            <div class="product-specs">
-                                <span class="spec"><i class="fas fa-cube"></i> 2000+ units</span>
-                                <span class="spec"><i class="fas fa-palette"></i> 3 colors</span>
-                            </div>
-                            <a href="#" class="product-link">View Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div> -->
-                    <!-- Navigation Arrows -->
-                    <button class="carousel-nav carousel-prev">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="carousel-nav carousel-next">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-    </section>
+    
 
     <!-- B2B Services Section -->
     <section class="services-section" id="services">
@@ -705,6 +753,9 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <!-- Custom JS -->
     <script src="js/script.js"></script>
