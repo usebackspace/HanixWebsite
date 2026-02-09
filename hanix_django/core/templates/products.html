@@ -1,0 +1,212 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Laptop Bags - Products | Hanix{% endblock %}
+
+{% block content %}
+<!-- Product Category Section -->
+<section class="product-category-section py-5 mt-3">
+    <div class="container-xxl">
+        <div class="section-header text-center mb-5">
+            <h2 class="section-title">Laptop Bags</h2>
+            <p class="section-subtitle">Explore our premium collection of laptop bags</p>
+            <div class="divider"></div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="product-card">
+                    <a href="{% url 'product_detail' %}" class="product-card-link">
+                    <div class="product-image">
+                        <img src="{% static 'images/product_categories/backpack.png' %}" alt="Laptop Bag 1">
+                    </div>
+                    <div class="product-content">
+                        <h3>Professional Laptop Bag</h3>
+                        <p class="product-desc">
+                            Durable and stylish laptop bag with multiple compartments.
+                        </p>
+
+                        <div class="product-meta">
+                            <span class="product-price ml-5">₹ 150–250</span>
+                            <span class="product-moq">MOQ: 100</span>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="product-card">
+                    <a href="{% url 'product_detail' %}" class="product-card-link">
+                    <div class="product-image">
+                        <img src="{% static 'images/product_categories/laptop-bag.png' %}" alt="Laptop Bag 2">
+                    </div>
+                    <div class="product-content">
+                        <h3>Executive Laptop Bag</h3>
+                        <p class="product-desc">
+                            Premium leather laptop bag with anti-theft features.
+                        </p>
+
+                        <div class="product-meta">
+                            <span class="product-price ml-5">₹ 200–300</span>
+                            <span class="product-moq">MOQ: 50</span>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="product-card">
+                    <a href="{% url 'product_detail' %}" class="product-card-link">
+                    <div class="product-image">
+                        <img src="{% static 'images/product_categories/corporate-bag.png' %}" alt="Laptop Bag 3">
+                    </div>
+                    <div class="product-content">
+                        <h3>Corporate Laptop Backpack</h3>
+                        <p class="product-desc">
+                            Ergonomic backpack designed for professionals on-the-go.
+                        </p>
+
+                        <div class="product-meta">
+                            <span class="product-price ml-5">₹ 175–275</span>
+                            <span class="product-moq">MOQ: 75</span>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="product-card">
+                    <a href="{% url 'product_detail' %}" class="product-card-link">
+                    <div class="product-image">
+                        <img src="{% static 'images/product_categories/customized-bag.png' %}" alt="Laptop Bag 4">
+                    </div>
+                    <div class="product-content">
+                        <h3>Custom Laptop Bag</h3>
+                        <p class="product-desc">
+                            Fully customizable laptop bag with your branding.
+                        </p>
+
+                        <div class="product-meta">
+                            <span class="product-price ml-5">₹ 150–400</span>
+                            <span class="product-moq">MOQ: 100</span>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="product-card">
+                    <a href="{% url 'product_detail' %}" class="product-card-link">
+                    <div class="product-image">
+                        <img src="{% static 'images/product_categories/backpack.png' %}" alt="Laptop Bag 5">
+                    </div>
+                    <div class="product-content">
+                        <h3>Travel Laptop Bag</h3>
+                        <p class="product-desc">
+                            Compact and lightweight laptop bag perfect for travel.
+                        </p>
+
+                        <div class="product-meta">
+                            <span class="product-price ml-5">₹ 180–280</span>
+                            <span class="product-moq">MOQ: 60</span>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="product-card">
+                    <a href="{% url 'product_detail' %}" class="product-card-link">
+                    <div class="product-image">
+                        <img src="{% static 'images/product_categories/laptop-bag.png' %}" alt="Laptop Bag 6">
+                    </div>
+                    <div class="product-content">
+                        <h3>Premium Laptop Case</h3>
+                        <p class="product-desc">
+                            Hard-shell protective laptop case with padding.
+                        </p>
+
+                        <div class="product-meta">
+                            <span class="product-price ml-5">₹ 250–350</span>
+                            <span class="product-moq">MOQ: 40</span>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="product-card">
+                    <a href="{% url 'product_detail' %}" class="product-card-link">
+                    <div class="product-image">
+                        <img src="{% static 'images/product_categories/duffle-bag.png' %}" alt="Laptop Bag 7">
+                    </div>
+                    <div class="product-content">
+                        <h3>Messenger Laptop Bag</h3>
+                        <p class="product-desc">
+                            Classic messenger style with organized compartments.
+                        </p>
+
+                        <div class="product-meta">
+                            <span class="product-price ml-5">₹ 190–290</span>
+                            <span class="product-moq">MOQ: 80</span>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="product-card">
+                    <a href="{% url 'product_detail' %}" class="product-card-link">
+                    <div class="product-image">
+                        <img src="{% static 'images/product_categories/school-bag.png' %}" alt="Laptop Bag 8">
+                    </div>
+                    <div class="product-content">
+                        <h3>Student Laptop Bag</h3>
+                        <p class="product-desc">
+                            Affordable laptop bag designed for students.
+                        </p>
+
+                        <div class="product-meta">
+                            <span class="product-price ml-5">₹ 120–200</span>
+                            <span class="product-moq">MOQ: 150</span>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination / Load More (Optional) -->
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <button class="btn btn-outline-primary btn-lg">Load More Products</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="about-section cta-section" id="product-cta">
+    <div class="container-xxl py-5 text-center">
+        <h2 class="section-title mb-3">Need Bulk Orders or Custom Solutions?</h2>
+        <p class="section-subtitle mb-4">Contact our B2B team to discuss your requirements.</p>
+        <a href="{% url 'contact' %}" class="btn btn-danger btn-lg px-5 py-3 shadow-lg"><i class="fas fa-paper-plane me-2"></i>Request a Quote</a>
+    </div>
+</section>
+{% endblock %}

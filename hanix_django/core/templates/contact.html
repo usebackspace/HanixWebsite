@@ -1,0 +1,260 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us - Hanix B2B Wholesale{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section" id="contact-hero" style="background: linear-gradient(135deg, #d8092c 0%, #a00620 100%); min-height: 300px;">
+    <div class="container-xxl h-100 d-flex align-items-center">
+        <div class="row w-100">
+            <div class="col-lg-12 hero-content text-white text-center">
+                <h1 class="hero-title" style="color: white;">Contact Hanix</h1>
+                <p class="hero-subtitle" style="color: rgba(255,255,255,0.9);">Get in touch with our B2B team for wholesale quotes and custom bag solutions</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact-main">
+    <div class="contact-background"></div>
+
+    <div class="container-xxl">
+        <div class="row gy-5 align-items-center">
+            <!-- Left Column: Info -->
+            <div class="col-lg-6 text-white contact-info-col">
+                <h2 class="section-title mb-4 text-white">Get in Touch</h2>
+                <p class="section-subtitle mb-4 text-dark">Our B2B team is ready to assist you with wholesale inquiries, custom orders, and bulk solutions.</p>
+
+                <div class="contact-info-list">
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h5>Address</h5>
+                        <p>Hanix Manufacturing<br>Industrial Area, City, State<br>India - 000000</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <h5>Phone</h5>
+                        <p><a href="tel:+911234567890" style="color: white; text-decoration: none;">+91 (123) 456-7890</a></p>
+                        <p style="margin-top: 8px;"><small>Monday - Friday: 9 AM - 6 PM IST</small></p>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <h5>Email</h5>
+                        <p><a href="mailto:sales@hanix.com" style="color: white; text-decoration: none;">sales@hanix.com</a></p>
+                        <p style="margin-top: 8px;"><a href="mailto:support@hanix.com" style="color: white; text-decoration: none;">support@hanix.com</a></p>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-globe"></i>
+                        <h5>Business Hours</h5>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM IST<br/>Saturday: 10:00 AM - 3:00 PM IST<br/>Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Form -->
+            <div class="col-lg-6">
+                <form class="contact-form" id="contactForm" method="POST">
+                    {% csrf_token %}
+                    <h3 style="margin-bottom: 24px; color: #333;">Send us a Message</h3>
+                    
+                    <div class="form-group mb-3">
+                        <label for="name" style="color: #333; font-weight: 600; margin-bottom: 8px; display: block;">Full Name *</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Full Name" name="name" required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="email" style="color: #333; font-weight: 600; margin-bottom: 8px; display: block;">Email Address *</label>
+                        <input type="email" class="form-control" id="email" placeholder="your@email.com" name="email" required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="company" style="color: #333; font-weight: 600; margin-bottom: 8px; display: block;">Company Name *</label>
+                        <input type="text" class="form-control" id="company" placeholder="Your Company Name" name="company" required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="phone" style="color: #333; font-weight: 600; margin-bottom: 8px; display: block;">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="+91 (123) 456-7890" name="phone">
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="category" style="color: #333; font-weight: 600; margin-bottom: 8px; display: block;">Product Category *</label>
+                        <select class="form-control" id="category" name="category" required>
+                            <option value="">-- Select a Category --</option>
+                            <option value="backpack">Backpacks</option>
+                            <option value="laptop">Laptop Bags</option>
+                            <option value="travel">Travel & Duffle Bags</option>
+                            <option value="corporate">Corporate Bags</option>
+                            <option value="promotional">Promotional Bags</option>
+                            <option value="school">School Bags</option>
+                            <option value="custom">Custom Solutions</option>
+                            <option value="other">Other (Please specify)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="quantity" style="color: #333; font-weight: 600; margin-bottom: 8px; display: block;">Estimated Order Quantity</label>
+                        <input type="text" class="form-control" id="quantity" placeholder="e.g., 500 units" name="quantity">
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="message" style="color: #333; font-weight: 600; margin-bottom: 8px; display: block;">Message / Inquiry *</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Tell us about your requirements, customizations needed, delivery timeline, etc." name="message" required></textarea>
+                    </div>
+
+                    <div class="form-group mb-3" style="display: flex; align-items: center; gap: 10px;">
+                        <input type="checkbox" id="subscribe" name="subscribe" checked>
+                        <label for="subscribe" style="margin: 0; color: #666; font-size: 14px;">Subscribe to our newsletter for special offers and updates</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-danger btn-lg w-100 fw-bold" style="padding: 12px 24px;">
+                        <i class="fas fa-paper-plane me-2"></i>Send Inquiry
+                    </button>
+
+                    <p style="text-align: center; color: #999; font-size: 12px; margin-top: 16px;">We'll respond to your inquiry within 24 hours</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Contact Us Section -->
+<section class="about-section bg-light" id="why-contact">
+    <div class="container-xxl py-5">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="section-title">Why Choose Hanix?</h2>
+                <p class="section-subtitle">Your trusted B2B partner for wholesale bags</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-item flex-column align-items-center text-center">
+                    <div class="feature-icon mb-3" style="font-size: 40px; color: #d8092c;"><i class="fas fa-award"></i></div>
+                    <h4>Premium Quality</h4>
+                    <p>ISO certified manufacturing with 100% quality assurance. Every product is rigorously tested before shipment.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-item flex-column align-items-center text-center">
+                    <div class="feature-icon mb-3" style="font-size: 40px; color: #d8092c;"><i class="fas fa-handshake"></i></div>
+                    <h4>Dedicated Support</h4>
+                    <p>24/7 customer support for all your wholesale needs. Speak with our experienced B2B specialists.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-item flex-column align-items-center text-center">
+                    <div class="feature-icon mb-3" style="font-size: 40px; color: #d8092c;"><i class="fas fa-globe"></i></div>
+                    <h4>Global Reach</h4>
+                    <p>We ship worldwide with competitive rates and reliable logistics. Fast delivery to any destination.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-item flex-column align-items-center text-center">
+                    <div class="feature-icon mb-3" style="font-size: 40px; color: #d8092c;"><i class="fas fa-paint-brush"></i></div>
+                    <h4>Custom Solutions</h4>
+                    <p>Full customization options including branding, colors, and materials tailored to your requirements.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-item flex-column align-items-center text-center">
+                    <div class="feature-icon mb-3" style="font-size: 40px; color: #d8092c;"><i class="fas fa-dollar-sign"></i></div>
+                    <h4>Competitive Pricing</h4>
+                    <p>Best wholesale rates with flexible payment terms and volume discounts for bulk orders.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-item flex-column align-items-center text-center">
+                    <div class="feature-icon mb-3" style="font-size: 40px; color: #d8092c;"><i class="fas fa-truck"></i></div>
+                    <h4>Fast Delivery</h4>
+                    <p>Quick turnaround with 15-20 day lead time. Priority express shipping options available.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="about-section" id="faq">
+    <div class="container-xxl py-5">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Quick answers to common inquiries</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item mb-3" style="border: 1px solid #e6e6e6; border-radius: 8px;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" style="font-weight: 600;">
+                                What is your minimum order quantity (MOQ)?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body" style="color: #666;">
+                                Our standard MOQ is 100 units per product. However, we offer flexibility for corporate clients and special orders. Contact us for custom arrangements.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-3" style="border: 1px solid #e6e6e6; border-radius: 8px;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" style="font-weight: 600;">
+                                What is the typical lead time for orders?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body" style="color: #666;">
+                                Standard lead time is 15-20 days from order confirmation. Rush orders and express shipments are available at additional costs.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-3" style="border: 1px solid #e6e6e6; border-radius: 8px;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" style="font-weight: 600;">
+                                Do you offer customization services?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body" style="color: #666;">
+                                Yes! We provide comprehensive customization including branding (embroidery, screen printing), custom colors, materials, and design modifications.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-3" style="border: 1px solid #e6e6e6; border-radius: 8px;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" style="font-weight: 600;">
+                                What payment terms do you accept?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body" style="color: #666;">
+                                We accept multiple payment methods including bank transfers, letters of credit, wire transfers, and payment gateways. Terms can be negotiated for bulk orders.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-3" style="border: 1px solid #e6e6e6; border-radius: 8px;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" style="font-weight: 600;">
+                                Do you offer warranty on products?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body" style="color: #666;">
+                                All our products come with a 2-year warranty against manufacturing defects. Quality assurance is our priority.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

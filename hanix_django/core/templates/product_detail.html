@@ -1,0 +1,292 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Hanix | Professional Laptop Backpack - Product Details{% endblock %}
+
+{% block extra_css %}
+<style>
+    :root {
+        --primary: #d8092c;
+        --text-dark: #333;
+        --text-medium: #666;
+        --border-light: #e6e6e6;
+        --background: #fff;
+    }
+
+    .container-pd { max-width: 1200px; margin: 24px auto; background: #fff; border-radius: 8px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,.1); }
+
+    /* Breadcrumb */
+    .breadcrumb { font-size: 14px; margin-bottom: 16px; color: var(--text-medium); }
+
+    /* Product layout */
+    .product { display: flex; gap: 32px; flex-wrap: wrap; }
+    .gallery { display: flex; gap: 16px; flex-wrap: wrap; }
+    .thumbs { display: flex; flex-direction: column; gap: 12px; }
+    .thumbs img { width: 64px; height: 64px; object-fit: cover; border: 1.5px solid var(--border-light); border-radius: 6px; cursor: pointer; }
+    .thumbs img.active { border-color: var(--primary); }
+    .main-img { width: 420px; height: 420px; border: 1.5px solid var(--border-light); border-radius: 10px; overflow: hidden; cursor: zoom-in; display: flex; align-items: center; justify-content: center; }
+    .main-img img { width: 100%; height: 100%; object-fit: contain; transition: transform .45s ease; }
+    .main-img:hover img { transform: scale(2.4); }
+
+    /* Details */
+    .details { flex: 1; display: flex; flex-direction: column; }
+    .details h1 { font-size: 24px; margin-bottom: 8px; }
+    .brand, .rating { font-size: 14px; color: var(--text-medium); margin-bottom: 8px; }
+
+    .price-box { border: 1.5px solid var(--border-light); border-radius: 8px; padding: 16px; margin-bottom: 24px; }
+    .price-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border-light); }
+    .price-row:last-child { border-bottom: none; font-weight: 700; color: var(--primary); }
+
+    .section { margin-bottom: 24px; }
+    .options { display: flex; gap: 12px; flex-wrap: wrap; }
+    .option { border: 1.5px solid var(--border-light); padding: 8px 16px; border-radius: 6px; cursor: pointer; }
+    .option.active { border-color: var(--primary); color: var(--primary); font-weight: 600; }
+
+    .actions { display: flex; gap: 16px; }
+    .btn-primary { background: var(--primary); color: #fff; flex: 1; padding: 14px; border-radius: 30px; border: none; cursor: pointer; font-weight: 600; }
+    .btn-secondary { border: 2px solid var(--primary); color: var(--primary); background: #fff; flex: 1; padding: 14px; border-radius: 30px; cursor: pointer; font-weight: 600; }
+
+    /* Tabs */
+    .product-info { margin-top: 48px; }
+    .info-tabs { display: flex; gap: 32px; border-bottom: 1.5px solid var(--border-light); position: sticky; top: 0; background: #fff; z-index: 100; }
+    .tab { background: none; border: none; padding: 14px 0; font-weight: 600; cursor: pointer; color: var(--text-medium); }
+    .tab.active { color: var(--text-dark); border-bottom: 3px solid var(--primary); }
+    .tab-content { display: none; margin-top: 24px; }
+    .tab-content.active { display: block; }
+
+    /* Attributes table */
+    .attr-table { width: 100%; border-collapse: collapse; }
+    .attr-table td { border: 1px solid var(--border-light); padding: 12px; }
+    .attr-table td:nth-child(odd) { background: #fafafa; font-weight: 600; }
+
+    @media (max-width: 900px) {
+        .product { flex-direction: column; }
+        .main-img { width: 100%; height: auto; }
+        .thumbs { flex-direction: row; overflow-x: auto; }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-pd">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb mt-4">
+        <a href="{% url 'index' %}" style="color: var(--primary); text-decoration: none;">Home</a> / 
+        <a href="{% url 'products' %}" style="color: var(--primary); text-decoration: none;">Products</a> / 
+        Professional Laptop Backpack
+    </div>
+
+    <!-- Product Section -->
+    <div class="product">
+        <!-- Gallery -->
+        <div class="gallery">
+            <div class="thumbs">
+                <img src="{% static 'images/product_categories/school-bag.png' %}" alt="View 1" class="product-thumbnail active" onclick="changeImage(this.src)">
+                <img src="{% static 'images/product_categories/backpack.png' %}" alt="View 2" class="product-thumbnail" onclick="changeImage(this.src)">
+                <img src="{% static 'images/product_categories/corporate-bag.png' %}" alt="View 3" class="product-thumbnail" onclick="changeImage(this.src)">
+                <img src="{% static 'images/product_categories/customized-bag.png' %}" alt="View 4" class="product-thumbnail" onclick="changeImage(this.src)">
+            </div>
+            <div class="main-img">
+                <img id="mainImage" src="{% static 'images/product_categories/school-bag.png' %}" alt="Product">
+            </div>
+        </div>
+
+        <!-- Details -->
+        <div class="details">
+            <h1>Professional Laptop Backpack</h1>
+            <div class="brand">Hanix Exclusive</div>
+            <div class="rating">⭐ 4.8 / 5 (320 Reviews)</div>
+
+            <!-- Price Box -->
+            <div class="price-box">
+                <div class="price-row">
+                    <span>Wholesale Price:</span>
+                    <span>₹ 150 - ₹ 250</span>
+                </div>
+                <div class="price-row">
+                    <span>Minimum Order Quantity:</span>
+                    <span>100 units</span>
+                </div>
+                <div class="price-row">
+                    <span>Lead Time:</span>
+                    <span>15-20 days</span>
+                </div>
+                <div class="price-row">
+                    <span style="font-weight: 700; color: var(--primary);">Total (100 units):</span>
+                    <span style="font-weight: 700; color: var(--primary);">₹ 15,000 - ₹ 25,000</span>
+                </div>
+            </div>
+
+            <!-- Customization Options -->
+            <div class="section">
+                <h4 style="margin-bottom: 12px;">Color Options</h4>
+                <div class="options">
+                    <div class="option active">Black</div>
+                    <div class="option">Navy Blue</div>
+                    <div class="option">Gray</div>
+                    <div class="option">Burgundy</div>
+                    <div class="option">Custom</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h4 style="margin-bottom: 12px;">Size Options</h4>
+                <div class="options">
+                    <div class="option active">Standard (17")</div>
+                    <div class="option">Large (18")</div>
+                    <div class="option">Compact (14")</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h4 style="margin-bottom: 12px;">Branding</h4>
+                <div class="options">
+                    <div class="option">No Logo</div>
+                    <div class="option">Embroidery</div>
+                    <div class="option">Screen Print</div>
+                    <div class="option">Metal Badge</div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="actions">
+                <button class="btn-primary" onclick="addToCart()">Add to Request</button>
+                <button class="btn-secondary" onclick="requestQuote()">Request Quote</button>
+            </div>
+
+            <!-- Contact Info -->
+            <div style="margin-top: 24px; padding: 16px; background: #f8f9fa; border-radius: 8px;">
+                <p style="margin: 0; font-weight: 600; margin-bottom: 8px;">Need Help?</p>
+                <p style="margin: 0; color: var(--text-medium);">Contact our B2B team at <a href="mailto:sales@hanix.com" style="color: var(--primary);">sales@hanix.com</a> or call <a href="tel:+911234567890" style="color: var(--primary);">+91 (123) 456-7890</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Info Tabs -->
+    <div class="product-info">
+        <div class="info-tabs">
+            <button class="tab active" onclick="switchTab(event, 'specs')">Specifications</button>
+            <button class="tab" onclick="switchTab(event, 'features')">Features</button>
+            <button class="tab" onclick="switchTab(event, 'shipping')">Shipping Info</button>
+            <button class="tab" onclick="switchTab(event, 'reviews')">Reviews</button>
+        </div>
+
+        <!-- Specifications Tab -->
+        <div id="specs" class="tab-content active">
+            <h3>Product Specifications</h3>
+            <table class="attr-table">
+                <tr>
+                    <td>Material</td>
+                    <td>100% Polyester with water-resistant coating</td>
+                </tr>
+                <tr>
+                    <td>Dimensions</td>
+                    <td>18" x 12" x 8" (Length x Width x Height)</td>
+                </tr>
+                <tr>
+                    <td>Weight Capacity</td>
+                    <td>Up to 15 kg (33 lbs)</td>
+                </tr>
+                <tr>
+                    <td>Laptop Compartment</td>
+                    <td>Fits up to 17" laptops</td>
+                </tr>
+                <tr>
+                    <td>Color Options</td>
+                    <td>Black, Navy Blue, Gray, Burgundy, and custom colors</td>
+                </tr>
+                <tr>
+                    <td>Warranty</td>
+                    <td>2-year warranty against manufacturing defects</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Features Tab -->
+        <div id="features" class="tab-content">
+            <h3>Key Features</h3>
+            <ul style="line-height: 1.8;">
+                <li>Multiple compartments for organized storage</li>
+                <li>Padded laptop compartment for maximum protection</li>
+                <li>Ergonomic design with breathable back panel</li>
+                <li>Anti-theft hidden pockets for valuables</li>
+                <li>USB charging port for on-the-go charging</li>
+                <li>Water-resistant exterior coating</li>
+                <li>Reinforced stitching for durability</li>
+                <li>Adjustable shoulder straps with cushioning</li>
+                <li>Top handle for easy carrying</li>
+                <li>Side pockets for quick access items</li>
+            </ul>
+        </div>
+
+        <!-- Shipping Tab -->
+        <div id="shipping" class="tab-content">
+            <h3>Shipping & Delivery Information</h3>
+            <p><strong>Lead Time:</strong> 15-20 days from order confirmation</p>
+            <p><strong>Minimum Order Quantity (MOQ):</strong> 100 units</p>
+            <p><strong>Packaging:</strong> Individual boxes with protective padding</p>
+            <p><strong>Shipping Methods:</strong> Air, Sea, or Express (cost varies by destination)</p>
+            <p><strong>Destinations:</strong> We ship worldwide with competitive rates</p>
+            <p><strong>Documentation:</strong> Complete customs documentation provided</p>
+            <p><strong>Insurance:</strong> Optional shipment insurance available</p>
+        </div>
+
+        <!-- Reviews Tab -->
+        <div id="reviews" class="tab-content">
+            <h3>Customer Reviews</h3>
+            <div style="margin-bottom: 24px;">
+                <p><strong>Average Rating: 4.8 / 5</strong> (Based on 320 reviews)</p>
+            </div>
+            <div style="border-top: 1px solid var(--border-light); padding-top: 16px;">
+                <div style="margin-bottom: 20px;">
+                    <p><strong>⭐⭐⭐⭐⭐ Excellent Quality</strong></p>
+                    <p>"We ordered 500 units for our corporate gifting and the quality exceeded our expectations. Hanix delivered on time and provided excellent customer support."</p>
+                    <p><em>- Rajesh Kumar, Corporate Buyer</em></p>
+                </div>
+                <div>
+                    <p><strong>⭐⭐⭐⭐⭐ Perfect for Wholesale</strong></p>
+                    <p>"Best wholesale supplier for corporate bags. Great pricing, bulk quantity available, and customization options. Highly recommended!"</p>
+                    <p><em>- Global Retail Manager</em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function changeImage(src) {
+        document.getElementById('mainImage').src = src;
+        document.querySelectorAll('.product-thumbnail').forEach(img => img.classList.remove('active'));
+        event.target.classList.add('active');
+    }
+
+    function switchTab(event, tabName) {
+        // Hide all tabs
+        document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+        document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+
+        // Show selected tab
+        document.getElementById(tabName).classList.add('active');
+        event.target.classList.add('active');
+    }
+
+    function addToCart() {
+        alert('Quote request added! Please proceed to checkout or contact us for final confirmation.');
+    }
+
+    function requestQuote() {
+        window.location.href = "{% url 'contact' %}";
+    }
+    /* Zoom follow */
+const zoomContainer = document.querySelector('.main-img');
+const zoomImg = document.getElementById('mainImage');
+zoomContainer.addEventListener('mousemove', e=>{
+  const rect=zoomContainer.getBoundingClientRect();
+  const x=((e.clientX-rect.left)/rect.width)*100;
+  const y=((e.clientY-rect.top)/rect.height)*100;
+  zoomImg.style.transformOrigin = `${x}% ${y}%`;
+});
+zoomContainer.addEventListener('mouseleave',()=>{zoomImg.style.transformOrigin='center';});
+</script>
+
+{% endblock %}

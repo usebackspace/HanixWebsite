@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us - Hanix | Premium B2B Bag Manufacturing{% endblock %}
+
+{% block content %}
+<!-- About Us Hero Section -->
+<section class="hero-section about-hero" id="about-hero">
+    <div class="hero-gradient"></div>
+    <div class="container-xxl h-100 d-flex align-items-center">
+        <div class="row w-100 flex-column-reverse flex-lg-row align-items-center">
+            <div class="col-lg-6 d-flex flex-column justify-content-center hero-content">
+                <h1 class="hero-title">About Hanix<br><span class="accent-text">Our Story, Mission & Vision</span></h1>
+                <p class="hero-subtitle">Empowering global brands with innovative, high-quality bags and exceptional B2B service for over a decade.</p>
+            </div>
+            <div class="col-lg-6 hero-images">
+                <div class="hero-mockup-container">
+                    <img src="{% static 'images/product_categories/industrial-bag.png' %}" alt="About Hanix" style="width:100%;height:100%;object-fit:cover;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.15);">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Company Story Section -->
+<section class="about-section" id="company-story">
+    <div class="container-xxl py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="about-image-container">
+                    <img src="{% static 'images/product_categories/our-journey.png' %}" alt="Hanix Factory" class="w-100 h-100" style="border-radius:12px;object-fit:cover;box-shadow:0 10px 40px rgba(0,0,0,0.12);">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h2 class="section-title mb-4">Our Journey</h2>
+                <p class="section-subtitle mb-4">From humble beginnings to a global B2B leader</p>
+                <p>Founded in 2012, Hanix began as a small workshop with a vision to redefine bag manufacturing for businesses worldwide. Over the years, our relentless commitment to quality, innovation, and customer satisfaction has transformed us into a trusted partner for global brands, corporations, and distributors. Today, Hanix stands at the forefront of the industry, delivering custom solutions and large-scale production with a personal touch.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission, Vision, Values Section -->
+<section class="about-section bg-light" id="mission-vision-values">
+    <div class="container-xxl py-5">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="section-title">Mission, Vision & Values</h2>
+                <p class="section-subtitle">What drives Hanix every day</p>
+            </div>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="feature-item flex-column align-items-center text-center">
+                    <div class="feature-icon mb-3"><i class="fas fa-bullseye"></i></div>
+                    <h4>Our Mission</h4>
+                    <p>To empower businesses worldwide with innovative, reliable, and sustainable bag solutions tailored to their unique needs.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-item flex-column align-items-center text-center">
+                    <div class="feature-icon mb-3"><i class="fas fa-eye"></i></div>
+                    <h4>Our Vision</h4>
+                    <p>To be the most trusted and admired B2B bag manufacturer, setting new standards in quality, service, and sustainability.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-item flex-column align-items-center text-center">
+                    <div class="feature-icon mb-3"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h4>Our Values</h4>
+                    <p>Integrity, innovation, customer focus, and a passion for excellence guide every decision and every product we deliver.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Manufacturing Capability Section -->
+<section class="about-section" id="manufacturing">
+    <div class="container-xxl py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-lg-2">
+                <div class="about-image-container">
+                    <img src="{% static 'images/product_categories/manufacturing-excellence-bag.png' %}" alt="Manufacturing" class="w-100 h-100" style="border-radius:12px;object-fit:cover;box-shadow:0 10px 40px rgba(0,0,0,0.12);">
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <h2 class="section-title mb-4">Manufacturing Excellence</h2>
+                <p class="section-subtitle mb-4">Advanced facilities & skilled craftsmanship</p>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-3"><i class="fas fa-industry me-2 text-primary"></i> 50,000+ sq. ft. state-of-the-art factory</li>
+                    <li class="mb-3"><i class="fas fa-users-cog me-2 text-primary"></i> 200+ skilled professionals</li>
+                    <li class="mb-3"><i class="fas fa-cogs me-2 text-primary"></i> Automated production lines for efficiency</li>
+                    <li class="mb-3"><i class="fas fa-check-double me-2 text-primary"></i> Rigorous quality control at every stage</li>
+                    <li class="mb-3"><i class="fas fa-globe me-2 text-primary"></i> Global shipping & logistics expertise</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team / Leadership Section -->
+<section class="about-section bg-light" id="leadership">
+    <div class="container-xxl py-5">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="section-title">Meet Our Leadership</h2>
+                <p class="section-subtitle">Experienced, passionate, and dedicated to your success</p>
+            </div>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="team-card p-4 bg-white rounded shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=200&q=80" alt="CEO" class="rounded-circle mb-3" style="width:100px;height:100px;object-fit:cover;">
+                    <h5 class="mb-1">Shivam Chaurasia</h5>
+                    <p class="text-danger mb-2">General Manager</p>
+                    <p class="mb-0">Expert in overseeing production management, and delivering results on time and within budget.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-card p-4 bg-white rounded shadow text-center h-100">
+                    <img src="{% static 'images/leaders/sandip-jaiswar.jpeg' %}" alt="COO" class="rounded-circle mb-3" style="width:100px;height:100px;object-fit:cover;">
+                    <h5 class="mb-1">Sandip Jaiswar</h5>
+                    <p class="text-danger mb-2">Chief Executive Officer</p>
+                    <p class="mb-0">Expert in strategic leadership and driving company growth across global markets.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-card p-4 bg-white rounded shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=200&q=80" alt="CFO" class="rounded-circle mb-3" style="width:100px;height:100px;object-fit:cover;">
+                    <h5 class="mb-1">Sarvesh Ojha</h5>
+                    <p class="text-danger mb-2">Chief Financial Officer</p>
+                    <p class="mb-0">Expert in financial planning, budgeting, and ensuring profitability for sustainable growth.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-card p-4 bg-white rounded shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=200&q=80" alt="MD" class="rounded-circle mb-3" style="width:100px;height:100px;object-fit:cover;">
+                    <h5 class="mb-1">Akash Tripathi</h5>
+                    <p class="text-danger mb-2">Managing Director</p>
+                    <p class="mb-0">Creative force behind Hanix's innovative and stylish bag collections.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="about-section cta-section" id="about-cta">
+    <div class="container-xxl py-5 text-center">
+        <h2 class="section-title mb-3">Ready to Partner with Hanix?</h2>
+        <p class="section-subtitle mb-4">Contact our B2B team for custom solutions, bulk orders, and global distribution.</p>
+        <a href="{% url 'contact' %}" class="btn btn-danger btn-lg px-5 py-3 shadow-lg"><i class="fas fa-paper-plane me-2"></i>Contact Us for Wholesale</a>
+    </div>
+</section>
+{% endblock %}
